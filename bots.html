@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Vanta/Trade — Bots</title>
+    <meta name="description" content="Manage intelligent trading bots and automated strategies." />
+    <meta name="theme-color" content="#111310" />
+    <link rel="stylesheet" href="./assets/index-DjKOMQ6G.css" type="text/css" />
+  </head>
+  <body>
+    <main class="terminal-shell">
+      <div class="ambient-grid"></div>
+      <header class="topbar">
+        <button class="mobile-trigger" aria-label="Open markets">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-menu" aria-hidden="true">
+            <path d="M4 5h16"></path>
+            <path d="M4 12h16"></path>
+            <path d="M4 19h16"></path>
+          </svg>
+        </button>
+        <a class="brand" href="/">
+          <span class="brand-mark">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-chart-column" aria-hidden="true">
+              <path d="M3 3v16a2 2 0 0 0 2 2h16"></path>
+              <path d="M18 17V9"></path>
+              <path d="M13 17V5"></path>
+              <path d="M8 17v-3"></path>
+            </svg>
+          </span>
+          VANTA<span class="brand-thin">/TRADE</span>
+        </a>
+        <nav>
+          <a href="index.html#terminal">Trade</a>
+          <a href="index.html#markets">Markets</a>
+          <a class="active" href="bots.html">Bots</a>
+          <a href="signals.html">Signals</a>
+          <a href="watchlist.html">Watchlist</a>
+        </nav>
+        <div class="top-actions">
+          <div class="connection ">
+            <i></i>
+            OFFLINE
+          </div>
+          <button class="login-button">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-log-in" aria-hidden="true">
+              <path d="m10 17 5-5-5-5"></path>
+              <path d="M15 12H3"></path>
+              <path d="M15 3h4a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2h-4"></path>
+            </svg>
+            <span>Log in with Deriv</span>
+          </button>
+        </div>
+      </header>
+
+      <div class="bots-shell">
+        <aside class="bots-aside">
+          <div class="rail-head">
+            <div>
+              <span class="eyebrow">AUTOMATION</span>
+              <h2>Bots</h2>
+            </div>
+          </div>
+
+          <div class="bot-list">
+            <div class="bot-card active">
+              <div class="bot-card-header">
+                <div class="bot-name">
+                  <span class="bot-dot"></span>
+                  <span>Momentum AI</span>
+                </div>
+                <span class="bot-status">Live</span>
+              </div>
+              <small>Volatility 100 / EURUSD</small>
+              <p>Captures short bursts from directional acceleration and trend continuation.</p>
+            </div>
+
+            <div class="bot-card">
+              <div class="bot-card-header">
+                <div class="bot-name">
+                  <span class="bot-dot"></span>
+                  <span>Grid Pulse</span>
+                </div>
+                <span class="bot-status">Idle</span>
+              </div>
+              <small>BTCUSD / Derived</small>
+              <p>Grid-based reentry logic tuned for volatility compression and breakout traps.</p>
+            </div>
+
+            <div class="bot-card">
+              <div class="bot-card-header">
+                <div class="bot-name">
+                  <span class="bot-dot"></span>
+                  <span>Trend Scout</span>
+                </div>
+                <span class="bot-status">Sync</span>
+              </div>
+              <small>Forex majors</small>
+              <p>Uses moving-average alignment and momentum confirmation before execution.</p>
+            </div>
+          </div>
+        </aside>
+
+        <section class="bots-main">
+          <div class="bot-header">
+            <div>
+              <span class="eyebrow">STRATEGY</span>
+              <h1>Momentum AI</h1>
+            </div>
+            <div class="bot-actions">
+              <button class="secondary-button">Pause</button>
+              <button class="login-button">Deploy bot</button>
+            </div>
+          </div>
+
+          <div class="bot-stats">
+            <div class="stat-box">
+              <span>Net P&amp;L</span>
+              <strong>$2,940</strong>
+            </div>
+            <div class="stat-box">
+              <span>Win rate</span>
+              <strong>68.4%</strong>
+            </div>
+            <div class="stat-box">
+              <span>Open trades</span>
+              <strong>14</strong>
+            </div>
+          </div>
+
+          <div class="bot-layout">
+            <div class="panel-box">
+              <h3>Active strategy</h3>
+              <div class="strategy-row">
+                <div class="strategy-meta">
+                  <strong>Directional Breakout</strong>
+                  <small>Entry trigger: 2-bar breakout confirmation</small>
+                </div>
+                <span class="pill">Enabled</span>
+              </div>
+              <div class="strategy-row">
+                <div class="strategy-meta">
+                  <strong>Risk filter</strong>
+                  <small>Max drawdown: 12% · daily loss cap: 3%</small>
+                </div>
+                <span class="pill">Protected</span>
+              </div>
+              <div class="strategy-row">
+                <div class="strategy-meta">
+                  <strong>Execution mode</strong>
+                  <small>Smart order routing · 3 tick latency</small>
+                </div>
+                <span class="pill">Fast</span>
+              </div>
+            </div>
+
+            <div class="panel-box">
+              <h3>Signals</h3>
+              <div class="strategy-row">
+                <div class="strategy-meta">
+                  <strong>VO 100</strong>
+                  <small>Trend: Bullish</small>
+                </div>
+                <span class="pill">Buy bias</span>
+              </div>
+              <div class="strategy-row">
+                <div class="strategy-meta">
+                  <strong>EUR/USD</strong>
+                  <small>Trend: Neutral</small>
+                </div>
+                <span class="pill">Watch</span>
+              </div>
+              <div class="strategy-row">
+                <div class="strategy-meta">
+                  <strong>BTC/USD</strong>
+                  <small>Trend: Range</small>
+                </div>
+                <span class="pill">Wait</span>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+
+      <footer>
+        <span>Vanta/Trade is an independent interface using Deriv APIs.</span>
+        <span>
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-clock3" aria-hidden="true">
+            <circle cx="12" cy="12" r="10"></circle>
+            <path d="M12 6v6h4"></path>
+          </svg>
+          Real-time execution <b>·</b>
+          <a href="https://deriv.com/terms-and-conditions/" target="_blank" rel="noreferrer">Terms &amp; risk</a>
+        </span>
+      </footer>
+    </main>
+    <script src="./assets/index-CjV58bTu.js"></script>
+  </body>
+</html>

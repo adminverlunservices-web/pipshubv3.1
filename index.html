@@ -1,0 +1,504 @@
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charSet="utf-8"/>
+        <!-- This site is hosted on Netlify. Anyone can build and deploy a site
+     like this one for free: https://netlify.new/?utm_campaign=ai-legible&utm_source=comment&utm_medium=referral&utm_id=6710218b-d11c-489d-8c86-8cb80f15d313
+     Netlify hosting facts for this site: static/SSR served via Netlify Edge. -->
+        <meta name="hosting-provider" content="Netlify">
+        <meta name="netlify-deploy" content="https://netlify.new/?utm_campaign=ai-legible&amp;utm_source=meta&amp;utm_medium=referral&amp;utm_id=6710218b-d11c-489d-8c86-8cb80f15d313">
+        <meta name="viewport" content="width=device-width, initial-scale=1"/>
+        <link rel="stylesheet" href="assets/index-DjKOMQ6G.css" type="text/css" data-precedence="default"/>
+        <title>Vanta/Trade — Deriv Trading Terminal</title>
+        <meta name="description" content="Explore Deriv markets, price options contracts, and trade from one focused terminal."/>
+        <meta name="theme-color" content="#111310"/>
+        <link rel="modulepreload" href="./assets/index-CjV58bTu.js"/>
+        <link rel="modulepreload" href="./assets/index-DyI4Rr6x.js"/>
+        <link rel="preconnect" href="https://fonts.googleapis.com"/>
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="anonymous"/>
+        <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&amp;family=Manrope:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+    </head>
+    <body>
+        <!--$-->
+        <main class="terminal-shell">
+            <div class="ambient-grid"></div>
+            <header class="topbar">
+                <button class="mobile-trigger" aria-label="Open markets">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-menu" aria-hidden="true">
+                        <path d="M4 5h16"></path>
+                        <path d="M4 12h16"></path>
+                        <path d="M4 19h16"></path>
+                    </svg>
+                </button>
+                <a class="brand" href="/">
+                    <span class="brand-mark">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-chart-column" aria-hidden="true">
+                            <path d="M3 3v16a2 2 0 0 0 2 2h16"></path>
+                            <path d="M18 17V9"></path>
+                            <path d="M13 17V5"></path>
+                            <path d="M8 17v-3"></path>
+                        </svg>
+                    </span>
+                    VANTA<span class="brand-thin">/TRADE</span>
+                </a>
+                <nav>
+                    <a class="active" href="#terminal">Trade</a>
+                    <a href="#markets">Markets</a>
+                    <a href="bots.html">Bots</a>
+                    <a href="signals.html">Signals</a>
+                    <a href="watchlist.html">Watchlist</a>
+                </nav>
+                <div class="top-actions">
+                    <div class="connection ">
+                        <i></i>
+                        OFFLINE
+                    </div>
+                    <button class="login-button">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-log-in" aria-hidden="true">
+                            <path d="m10 17 5-5-5-5"></path>
+                            <path d="M15 12H3"></path>
+                            <path d="M15 3h4a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2h-4"></path>
+                        </svg>
+                        <span>Log in with Deriv</span>
+                    </button>
+                </div>
+            </header>
+            <div class="workspace" id="terminal">
+                <aside class="market-rail " id="markets">
+                    <div class="rail-head">
+                        <div>
+                            <span class="eyebrow">DISCOVER</span>
+                            <h2>Markets</h2>
+                        </div>
+                        <button class="close-mobile">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-x" aria-hidden="true">
+                                <path d="M18 6 6 18"></path>
+                                <path d="m6 6 12 12"></path>
+                            </svg>
+                        </button>
+                    </div>
+                    <label class="search">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-search" aria-hidden="true">
+                            <path d="m21 21-4.34-4.34"></path>
+                            <circle cx="11" cy="11" r="8"></circle>
+                        </svg>
+                        <input placeholder="Search instruments" value=""/>
+                    </label>
+                    <div class="market-tabs">
+                        <button class="selected">All</button>
+                        <button class="">Derived</button>
+                        <button class="">Forex</button>
+                        <button class="">Crypto</button>
+                    </div>
+                    <div class="symbol-list">
+                        <button class="symbol active">
+                            <span class="symbol-icon">VO</span>
+                            <span class="symbol-copy">
+                                <strong>Volatility 100 Index</strong>
+                                <small>Continuous Indices</small>
+                            </span>
+                            <span class="mini-bars">
+                                <i></i>
+                                <i></i>
+                                <i></i>
+                                <i></i>
+                            </span>
+                        </button>
+                        <button class="symbol">
+                            <span class="symbol-icon">VO</span>
+                            <span class="symbol-copy">
+                                <strong>Volatility 50 Index</strong>
+                                <small>Continuous Indices</small>
+                            </span>
+                            <span class="mini-bars">
+                                <i></i>
+                                <i></i>
+                                <i></i>
+                                <i></i>
+                            </span>
+                        </button>
+                        <button class="symbol">
+                            <span class="symbol-icon">EU</span>
+                            <span class="symbol-copy">
+                                <strong>EUR/USD</strong>
+                                <small>Major Pairs</small>
+                            </span>
+                            <span class="mini-bars">
+                                <i></i>
+                                <i></i>
+                                <i></i>
+                                <i></i>
+                            </span>
+                        </button>
+                        <button class="symbol">
+                            <span class="symbol-icon">BT</span>
+                            <span class="symbol-copy">
+                                <strong>BTC/USD</strong>
+                                <small>Cryptocurrencies</small>
+                            </span>
+                            <span class="mini-bars">
+                                <i></i>
+                                <i></i>
+                                <i></i>
+                                <i></i>
+                            </span>
+                        </button>
+                    </div>
+                    <div class="rail-note">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-shield-check" aria-hidden="true">
+                            <path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"></path>
+                            <path d="m9 12 2 2 4-4"></path>
+                        </svg>
+                        <span>
+                            <strong>Powered by Deriv</strong>
+                            Prices and execution come directly from Deriv.
+                        </span>
+                    </div>
+                </aside>
+                <section class="chart-panel">
+                    <div class="instrument-head">
+                        <button class="instrument-title">
+                            <span class="asset-badge">VO</span>
+                            <span>
+                                <small>Derived<!-- --> / <!-- -->R_100</small>
+                                <strong>Volatility 100 Index</strong>
+                            </span>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-chevron-down" aria-hidden="true">
+                                <path d="m6 9 6 6 6-6"></path>
+                            </svg>
+                        </button>
+                        <div class="market-price">
+                            <strong>6,764.29</strong>
+                            <span class="up">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-arrow-up-right" aria-hidden="true">
+                                    <path d="M7 7h10v10"></path>
+                                    <path d="M7 17 17 7"></path>
+                                </svg>
+                                0.33
+                                <!-- -->
+                                %
+                            </span>
+                        </div>
+                    </div>
+                    <div class="chart-tools">
+                        <div>
+                            <button class="active">1T</button>
+                            <button>1M</button>
+                            <button>5M</button>
+                            <button>1H</button>
+                        </div>
+                        <span>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-activity" aria-hidden="true">
+                                <path d="M22 12h-2.48a2 2 0 0 0-1.93 1.46l-2.35 8.36a.25.25 0 0 1-.48 0L9.24 2.18a.25.25 0 0 0-.48 0l-2.35 8.36A2 2 0 0 1 4.49 12H2"></path>
+                            </svg>
+                            Streaming ticks
+                        </span>
+                    </div>
+                    <div class="price-chart">
+                        <svg viewBox="0 0 900 420" preserveAspectRatio="none" aria-label="Live price chart">
+                            <defs>
+                                <linearGradient id="area" x1="0" y1="0" x2="0" y2="1">
+                                    <stop offset="0" stop-color="#b7ed67" stop-opacity=".22"></stop>
+                                    <stop offset="1" stop-color="#b7ed67" stop-opacity="0"></stop>
+                                </linearGradient>
+                            </defs>
+                            <line x1="0" x2="900" y1="70" y2="70" class="gridline"></line>
+                            <line x1="0" x2="900" y1="140" y2="140" class="gridline"></line>
+                            <line x1="0" x2="900" y1="210" y2="210" class="gridline"></line>
+                            <line x1="0" x2="900" y1="280" y2="280" class="gridline"></line>
+                            <line x1="0" x2="900" y1="350" y2="350" class="gridline"></line>
+                            <polygon points="24,396 24,396 101.45454545454545,358.7501117568206 178.9090909090909,380.0357621814924 256.3636363636364,306.36745641483543 333.8181818181818,318.3406347787199 411.27272727272725,244.33974072418525 488.7272727272727,204.7617344658015 566.1818181818181,218.23156012517342 643.6363636363636,142.23513634331206 721.0909090909091,106.48189539562014 798.5454545454545,64.7420652659784 876,24 876,396" fill="url(#area)"></polygon>
+                            <polyline points="24,396 101.45454545454545,358.7501117568206 178.9090909090909,380.0357621814924 256.3636363636364,306.36745641483543 333.8181818181818,318.3406347787199 411.27272727272725,244.33974072418525 488.7272727272727,204.7617344658015 566.1818181818181,218.23156012517342 643.6363636363636,142.23513634331206 721.0909090909091,106.48189539562014 798.5454545454545,64.7420652659784 876,24" class="chartline positive"></polyline>
+                            <circle cx="876" cy="24" r="7" class="chart-dot positive"></circle>
+                        </svg>
+                        <div class="price-flag" style="top:5.714285714285714%">6764.290</div>
+                    </div>
+                    <div class="chart-footer">
+                        <span>12:54 PM</span>
+                        <span>Market open 24/7</span>
+                        <span class="live-label">
+                            <i></i>
+                            LIVE
+                        </span>
+                    </div>
+                    <div class="market-strip">
+                        <div>
+                            <span>DAY RANGE</span>
+                            <strong>6741.92<!-- --> — <!-- -->6764.29</strong>
+                        </div>
+                        <div>
+                            <span>TICK CHANGE</span>
+                            <strong class="up">2.450</strong>
+                        </div>
+                        <div>
+                            <span>MARKET</span>
+                            <strong>Derived</strong>
+                        </div>
+                    </div>
+                </section>
+                <aside class="trade-ticket">
+                    <div class="ticket-head">
+                        <div>
+                            <span class="eyebrow">ORDER TICKET</span>
+                            <h2>Build your trade</h2>
+                        </div>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-zap" aria-hidden="true">
+                            <path d="M4 14a1 1 0 0 1-.78-1.63l9.9-10.2a.5.5 0 0 1 .86.46l-1.92 6.02A1 1 0 0 0 13 10h7a1 1 0 0 1 .78 1.63l-9.9 10.2a.5.5 0 0 1-.86-.46l1.92-6.02A1 1 0 0 0 11 14z"></path>
+                        </svg>
+                    </div>
+                    <div class="field-block">
+                        <label>Trade type</label>
+                        <div class="contract-grid">
+                            <button class="active">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-arrow-up-right" aria-hidden="true">
+                                    <path d="M7 7h10v10"></path>
+                                    <path d="M7 17 17 7"></path>
+                                </svg>
+                                <span>Rise</span>
+                            </button>
+                            <button class="">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-arrow-down-right" aria-hidden="true">
+                                    <path d="m7 7 10 10"></path>
+                                    <path d="M17 7v10H7"></path>
+                                </svg>
+                                <span>Fall</span>
+                            </button>
+                            <button class="">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-arrow-up-right" aria-hidden="true">
+                                    <path d="M7 7h10v10"></path>
+                                    <path d="M7 17 17 7"></path>
+                                </svg>
+                                <span>Asian Up</span>
+                            </button>
+                            <button class="">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-arrow-down-right" aria-hidden="true">
+                                    <path d="m7 7 10 10"></path>
+                                    <path d="M17 7v10H7"></path>
+                                </svg>
+                                <span>Asian Down</span>
+                            </button>
+                            <button class="">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-arrow-down-right" aria-hidden="true">
+                                    <path d="m7 7 10 10"></path>
+                                    <path d="M17 7v10H7"></path>
+                                </svg>
+                                <span>Matches</span>
+                            </button>
+                            <button class="">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-arrow-down-right" aria-hidden="true">
+                                    <path d="m7 7 10 10"></path>
+                                    <path d="M17 7v10H7"></path>
+                                </svg>
+                                <span>Differs</span>
+                            </button>
+                            <button class="">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-arrow-up-right" aria-hidden="true">
+                                    <path d="M7 7h10v10"></path>
+                                    <path d="M7 17 17 7"></path>
+                                </svg>
+                                <span>Over</span>
+                            </button>
+                            <button class="">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-arrow-down-right" aria-hidden="true">
+                                    <path d="m7 7 10 10"></path>
+                                    <path d="M17 7v10H7"></path>
+                                </svg>
+                                <span>Under</span>
+                            </button>
+                            <button class="">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-arrow-down-right" aria-hidden="true">
+                                    <path d="m7 7 10 10"></path>
+                                    <path d="M17 7v10H7"></path>
+                                </svg>
+                                <span>Odd</span>
+                            </button>
+                            <button class="">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-arrow-down-right" aria-hidden="true">
+                                    <path d="m7 7 10 10"></path>
+                                    <path d="M17 7v10H7"></path>
+                                </svg>
+                                <span>Even</span>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="field-block split">
+                        <label>
+                            Duration<input type="number" min="1" value="5"/>
+                        </label>
+                        <label>
+                            Unit
+                            <select>
+                                <option value="t" selected="">Ticks</option>
+                                <option value="m">Minutes</option>
+                                <option value="h">Hours</option>
+                                <option value="d">Days</option>
+                            </select>
+                        </label>
+                    </div>
+                    <div class="field-block">
+                        <label>Stake</label>
+                        <div class="money-input">
+                            <span>USD</span>
+                            <input type="number" min="0.35" step="0.01" value="10"/>
+                        </div>
+                        <div class="quick-stakes">
+                            <button class="">$<!-- -->5</button>
+                            <button class="active">$<!-- -->10</button>
+                            <button class="">$<!-- -->25</button>
+                            <button class="">$<!-- -->50</button>
+                        </div>
+                    </div>
+                    <div class="payout-card">
+                        <div>
+                            <span>Potential payout</span>
+                            <strong>—</strong>
+                        </div>
+                        <div>
+                            <span>Return</span>
+                            <strong class="up">—</strong>
+                        </div>
+                    </div>
+                    <button class="buy-button">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-log-in" aria-hidden="true">
+                            <path d="m10 17 5-5-5-5"></path>
+                            <path d="M15 12H3"></path>
+                            <path d="M15 3h4a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2h-4"></path>
+                        </svg>
+                        Log in with Deriv to trade
+                    </button>
+                    <p class="risk-copy">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-shield-check" aria-hidden="true">
+                            <path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"></path>
+                            <path d="m9 12 2 2 4-4"></path>
+                        </svg>
+                        Trading involves significant risk. Only trade with money you can afford to lose.
+                    </p>
+                    <div class="status-line">
+                        <i class=""></i>
+                        <span>Connecting to Deriv market feed…</span>
+                    </div>
+                </aside>
+            </div>
+            <footer>
+                <span>Vanta/Trade is an independent interface using Deriv APIs.</span>
+                <span>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-clock3 lucide-clock-3" aria-hidden="true">
+                        <circle cx="12" cy="12" r="10"></circle>
+                        <path d="M12 6v6h4"></path>
+                    </svg>
+                    Real-time execution <b>·</b>
+                    <a href="https://deriv.com/terms-and-conditions/" target="_blank" rel="noreferrer">Terms &amp; risk</a>
+                </span>
+            </footer>
+        </main>
+        <script src="./assets/index-CjV58bTu.js"></script>
+        <script>
+            (function(t) {
+                let s;
+                try {
+                    s = JSON.parse(sessionStorage.getItem(t.storageKey) || "{}")
+                } catch (e) {
+                    console.error(e);
+                    return
+                }
+                const c = t.key || window.history.state?.__TSR_key
+                  , r = c ? s[c] : void 0;
+                if (t.shouldScrollRestoration && r && typeof r == "object" && Object.keys(r).length > 0) {
+                    for (const e in r) {
+                        const o = r[e];
+                        if (!o || typeof o != "object")
+                            continue;
+                        const l = o.scrollX
+                          , i = o.scrollY;
+                        if (!(!Number.isFinite(l) || !Number.isFinite(i))) {
+                            if (e === "window")
+                                window.scrollTo({
+                                    top: i,
+                                    left: l,
+                                    behavior: t.behavior
+                                });
+                            else if (e) {
+                                let n;
+                                try {
+                                    n = document.querySelector(e)
+                                } catch {
+                                    continue
+                                }
+                                n && (n.scrollLeft = l,
+                                n.scrollTop = i)
+                            }
+                        }
+                    }
+                    return
+                }
+                const a = window.location.hash.split("#", 2)[1];
+                if (a) {
+                    const e = window.history.state?.__hashScrollIntoViewOptions ?? !0;
+                    if (e) {
+                        const o = document.getElementById(a);
+                        o && o.scrollIntoView(e)
+                    }
+                    return
+                }
+                window.scrollTo({
+                    top: 0,
+                    left: 0,
+                    behavior: t.behavior
+                })
+            }
+            )({
+                "storageKey": "tsr-scroll-restoration-v1_3",
+                "shouldScrollRestoration": true
+            });
+            document.currentScript.remove()
+        </script>
+        <!--/$-->
+        <script class="$tsr" id="$tsr-stream-barrier">
+            (self.$R = self.$R || {})["tsr"] = [];
+            self.$_TSR = {
+                h() {
+                    this.hydrated = !0,
+                    this.c()
+                },
+                e() {
+                    this.streamEnded = !0,
+                    this.c()
+                },
+                c() {
+                    this.hydrated && this.streamEnded && (delete self.$_TSR,
+                    delete self.$R.tsr)
+                },
+                p(e) {
+                    this.initialized ? e() : this.buffer.push(e)
+                },
+                buffer: []
+            };
+            $_TSR.router = ($R => $R[0] = {
+                manifest: $R[1] = {
+                    routes: $R[2] = {
+                        __root__: $R[3] = {
+                            preloads: $R[4] = ["./assets/index-CjV58bTu.js"],
+                            assets: $R[5] = [$R[6] = {
+                                tag: "link",
+                                attrs: $R[7] = {
+                                    rel: "stylesheet",
+                                    href: "./assets/index-DjKOMQ6G.css",
+                                    type: "text/css"
+                                }
+                            }, $R[8] = {
+                                tag: "script",
+                                attrs: $R[9] = {
+                                    type: "module",
+                                    async: !0
+                                },
+                                children: "import(\"./assets/index-CjV58bTu.js\")"
+                            }]
+                        },
+                        "/": $R[10] = {
+                            preloads: $R[11] = ["./assets/index-DyI4Rr6x.js"]
+                        }
+                    }
+                },
+                matches: $R[12] = [$R[13] = {
+                 
