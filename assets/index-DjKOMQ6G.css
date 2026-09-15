@@ -66,6 +66,21 @@ a { color: inherit; text-decoration: none; }
   z-index: 1;
 }
 
+.mobile-nav-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(7, 11, 9, 0.52);
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.2s ease;
+  z-index: 20;
+}
+
+.mobile-nav-overlay.visible {
+  opacity: 1;
+  pointer-events: auto;
+}
+
 .topbar {
   display: flex;
   align-items: center;

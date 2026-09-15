@@ -2,14 +2,52 @@ document.addEventListener('DOMContentLoaded', () => {
   const marketRail = document.querySelector('.market-rail');
   const mobileTrigger = document.querySelector('.mobile-trigger');
   const closeMobile = document.querySelector('.close-mobile');
+  let overlay = document.querySelector('.mobile-nav-overlay');
+
+  if (!overlay) {
+    overlay = document.createElement('button');
+    overlay.type = 'button';
+    overlay.className = 'mobile-nav-overlay';
+    overlay.setAttribute('aria-label', 'Close markets menu');
+    document.body.appendChild(overlay);
+  }
+
+  const setMarketRailOpen = (open) => {
+    if (!marketRail) return;
+    marketRail.classList.toggle('open', open);
+    overlay.classList.toggle('visible', open);
+    document.body.style.overflow = open ? 'hidden' : '';
+  };
 
   if (mobileTrigger && marketRail) {
-    mobileTrigger.addEventListener('click', () => marketRail.classList.add('open'));
+    mobileTrigger.addEventListener('click', (event) => {
+      event.stopPropagation();
+      const isOpen = marketRail.classList.contains('open');
+      setMarketRailOpen(!isOpen);
+    });
   }
 
   if (closeMobile && marketRail) {
-    closeMobile.addEventListener('click', () => marketRail.classList.remove('open'));
+    closeMobile.addEventListener('click', () => setMarketRailOpen(false));
   }
+
+  overlay.addEventListener('click', () => setMarketRailOpen(false));
+
+  document.addEventListener('click', (event) => {
+    if (!marketRail || !marketRail.classList.contains('open')) return;
+    const target = event.target;
+    const clickedInsideRail = marketRail.contains(target);
+    const clickedTrigger = mobileTrigger && mobileTrigger.contains(target);
+    if (!clickedInsideRail && !clickedTrigger) {
+      setMarketRailOpen(false);
+    }
+  });
+
+  document.addEventListener('keydown', (event) => {
+    if (event.key === 'Escape' && marketRail && marketRail.classList.contains('open')) {
+      setMarketRailOpen(false);
+    }
+  });
 
   document.querySelectorAll('.market-tabs button').forEach((button) => {
     button.addEventListener('click', () => {
