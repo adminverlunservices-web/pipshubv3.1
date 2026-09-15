@@ -20,6 +20,7 @@
         <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&amp;family=Manrope:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
     </head>
     <body>
+        <div class="mobile-nav-overlay" aria-hidden="true"></div>
         <!--$-->
         <main class="terminal-shell">
             <div class="ambient-grid"></div>

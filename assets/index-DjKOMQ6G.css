@@ -814,7 +814,41 @@ footer svg {
   }
 
   .topbar nav {
-    display: none;
+    position: fixed;
+    top: 92px;
+    left: 16px;
+    right: 16px;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 8px;
+    padding: 12px;
+    border: 1px solid var(--line);
+    border-radius: 18px;
+    background: rgba(10, 15, 12, 0.98);
+    box-shadow: 0 22px 55px rgba(0, 0, 0, 0.35);
+    opacity: 0;
+    pointer-events: none;
+    transform: translateY(-10px);
+    transition: opacity 0.2s ease, transform 0.2s ease;
+    z-index: 35;
+  }
+
+  .topbar nav.open {
+    opacity: 1;
+    pointer-events: auto;
+    transform: translateY(0);
+  }
+
+  .topbar nav a {
+    width: 100%;
+    padding: 12px 14px;
+    text-align: left;
+    border: 1px solid transparent;
+  }
+
+  .topbar nav a.active {
+    border-color: var(--line-strong);
   }
 
   .top-actions {

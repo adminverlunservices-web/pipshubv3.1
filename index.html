@@ -20,6 +20,7 @@
         <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&amp;family=Manrope:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
     </head>
     <body>
+        <div class="mobile-nav-overlay" aria-hidden="true"></div>
         <!--$-->
         <main class="terminal-shell">
             <div class="ambient-grid"></div>
@@ -392,6 +393,33 @@
                 </span>
             </footer>
         </main>
+        <script>
+            const nav = document.querySelector('.topbar nav');
+            const trigger = document.querySelector('.mobile-trigger');
+            const overlay = document.querySelector('.mobile-nav-overlay');
+            const closeNav = () => {
+                document.body.classList.remove('nav-open');
+                nav && nav.classList.remove('open');
+                overlay && overlay.classList.remove('visible');
+            };
+            const toggleNav = () => {
+                if (!nav) return;
+                const isOpen = nav.classList.toggle('open');
+                document.body.classList.toggle('nav-open', isOpen);
+                overlay && overlay.classList.toggle('visible', isOpen);
+            };
+            if (trigger && nav) {
+                trigger.addEventListener('click', toggleNav);
+                overlay && overlay.addEventListener('click', closeNav);
+                nav.querySelectorAll('a').forEach((link) => link.addEventListener('click', closeNav));
+                document.addEventListener('keydown', (event) => {
+                    if (event.key === 'Escape') closeNav();
+                });
+                window.addEventListener('resize', () => {
+                    if (window.innerWidth > 720) closeNav();
+                });
+            }
+        </script>
         <script src="./assets/index-CjV58bTu.js"></script>
         <script>
             (function(t) {

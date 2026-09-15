@@ -9,9 +9,17 @@
     <link rel="stylesheet" href="./assets/index-DjKOMQ6G.css" type="text/css" />
   </head>
   <body>
+    <div class="mobile-nav-overlay" aria-hidden="true"></div>
     <main class="terminal-shell">
       <div class="ambient-grid"></div>
       <header class="topbar">
+        <button class="mobile-trigger" aria-label="Open menu">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-menu" aria-hidden="true">
+            <path d="M4 5h16"></path>
+            <path d="M4 12h16"></path>
+            <path d="M4 19h16"></path>
+          </svg>
+        </button>
         <a class="brand" href="/">
           <span class="brand-mark">
             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-chart-column" aria-hidden="true">
@@ -77,5 +85,32 @@
         </span>
       </footer>
     </main>
+    <script>
+      const nav = document.querySelector('.topbar nav');
+      const trigger = document.querySelector('.mobile-trigger');
+      const overlay = document.querySelector('.mobile-nav-overlay');
+      const closeNav = () => {
+        document.body.classList.remove('nav-open');
+        nav && nav.classList.remove('open');
+        overlay && overlay.classList.remove('visible');
+      };
+      const toggleNav = () => {
+        if (!nav) return;
+        const isOpen = nav.classList.toggle('open');
+        document.body.classList.toggle('nav-open', isOpen);
+        overlay && overlay.classList.toggle('visible', isOpen);
+      };
+      if (trigger && nav) {
+        trigger.addEventListener('click', toggleNav);
+        overlay && overlay.addEventListener('click', closeNav);
+        nav.querySelectorAll('a').forEach((link) => link.addEventListener('click', closeNav));
+        document.addEventListener('keydown', (event) => {
+          if (event.key === 'Escape') closeNav();
+        });
+        window.addEventListener('resize', () => {
+          if (window.innerWidth > 720) closeNav();
+        });
+      }
+    </script>
   </body>
 </html>
